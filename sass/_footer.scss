@@ -1,0 +1,22 @@
+.footer {
+  @include fontS;
+  font-weight: 600;
+  color: #a9a9a9;
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+  position: relative;
+
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 7rem;
+  }
+
+  &:before {
+    content: "";
+    height: 1px;
+    background-color: currentColor;
+    width: 30%;
+    position: absolute;
+    bottom: 3rem;
+  }
+}

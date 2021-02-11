@@ -1,0 +1,53 @@
+/* CSS VARIABLES */
+
+:root {
+  /* FONT FAMILY */
+
+  --font-primary: "Montserrat", sans-serif;
+
+  /* FONTS SIZE */
+
+  --fxl: 2.4rem; // font XL
+  --fl: 1.8rem; // font L
+  --fm: 1.6rem; // font M
+  --fs: 1.4rem; // font S
+  --fxs: 1.2rem; // font XS
+
+  /* LINE HEIGHT */
+
+  --lxl: 3rem; // Line height XL
+  --ll: 2.2rem; // LH L
+  --lm: 2rem; // LH M
+  --ls: 1.7rem; // LH S
+  --lxs: 1.4rem; // LH XS
+
+  /* COLORS */
+
+  /* SOFT WHITE */
+
+  --color-white: #fff;
+
+  /* BLACK */
+
+  --color-black: #000;
+
+  /* GREY */
+
+  --light-grey-1: #f2f2f2;
+  --light-grey-2: #e0e0e0;
+  --light-grey-3: #c4c4c4;
+
+  --dark-grey-1: #828282;
+  --dark-grey-2: #4f4f4f;
+  --dark-grey-3: #333;
+
+  /* COLORS */
+
+  --color-sky: #2d9cdb;
+  --color-green: #27ae60;
+  --color-red: #eb5757;
+
+  /* BOX SHADOW */
+
+  --shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+}

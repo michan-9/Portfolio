@@ -1,0 +1,68 @@
+.skill {
+  grid-column: side-start / side-end;
+  grid-row: 1 / 2;
+
+  @include basicLayout;
+
+  display: grid;
+  grid-template-columns: [text-start] max-content [text-end bar-start] 1fr 1fr [bar-end];
+  grid-auto-rows: min-content;
+  gap: 1.8rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: [text-start bar-start] 1fr [text-end bar-end];
+    gap: 1rem;
+  }
+
+  &__title {
+    grid-column: text-start / bar-end;
+  }
+
+  &__text {
+    grid-column: text-start / text-end;
+  }
+
+  &__bar,
+  &__progress {
+    height: 10px;
+    border-radius: 12px;
+  }
+
+  &__bar {
+    grid-column: bar-start / bar-end;
+    align-self: center;
+    background-color: var(--light-grey-3);
+    position: relative;
+    z-index: 1;
+  }
+
+  &__progress {
+    position: absolute;
+    background-color: var(--color-green);
+    z-index: 2;
+
+    &--1 {
+      width: 65%;
+    }
+
+    &--2 {
+      width: 83%;
+    }
+
+    &--3 {
+      width: 91%;
+    }
+
+    &--4 {
+      width: 65%;
+    }
+
+    &--5 {
+      width: 83%;
+    }
+
+    &--6 {
+      width: 91%;
+    }
+  }
+}

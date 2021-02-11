@@ -1,0 +1,50 @@
+/* FONT SIZE + LINE-HEIGHT */
+
+/* START VALUE = 10PX = 1REM */
+
+/* MORE INFO AT @BASE.SCSS AND @VARIABLES.SCSS */
+
+@mixin fontxL {
+  font-size: var(--fxl); // 2.4rem
+  line-height: var(--lxl); // 3rem
+}
+
+@mixin fontL {
+  font-size: var(--fl); // 1.8rem
+  line-height: var(--ll); // 2.2rem
+}
+
+@mixin fontM {
+  font-size: var(--fm); // 1.6rem
+  line-height: var(--lm); // 2rem
+}
+
+@mixin fontS {
+  font-size: var(--fs); // 1.4rem
+  line-height: var(--ls); // 1.7rem
+}
+
+@mixin fontxS {
+  font-size: var(--fxs); // 1.2rem
+  line-height: var(--lxs); // 1.4rem
+}
+
+/* LAYOUT STYLE */
+
+@mixin basicLayout {
+  padding: 2.2rem;
+  border-radius: 12px;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 1.2rem;
+  }
+}
+
+/* WIDTH AND BORDERS */
+
+@mixin widthBorder {
+  width: 100%;
+  border-radius: 12px;
+}

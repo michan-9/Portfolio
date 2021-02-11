@@ -1,0 +1,25 @@
+.experience {
+  @include basicLayout;
+
+  &__wrapper {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem 1.5rem;
+  }
+
+  &__img {
+    width: 100%;
+    grid-row: 1 / 3;
+  }
+
+  &__date {
+    align-self: end;
+  }
+
+  &__job,
+  &__date,
+  &__text {
+    grid-column: 2 / 3;
+  }
+}

@@ -1,0 +1,52 @@
+/* DRY PRINCIPLE */
+
+.heading-1,
+.heading-2 {
+  @include fontxL;
+  color: var(--color-green);
+
+  @media only screen and (max-width: $bp-medium) {
+    @include fontL;
+  }
+}
+
+/* HEADINGS STYLE */
+
+.heading-1 {
+  font-weight: 600;
+}
+
+.heading-2 {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.heading-3 {
+  @include fontL;
+  font-weight: 500;
+  color: var(--dark-grey-3);
+
+  @media only screen and (max-width: $bp-medium) {
+    @include fontM;
+  }
+}
+
+/* BASIC PARAGRAPH */
+
+.paragraph {
+  @include fontM;
+
+  @media only screen and (max-width: $bp-medium) {
+    @include fontS;
+  }
+}
+
+/* TAGS AT CARDS #HTML, #RESPONSIVE... ETC */
+
+.tag {
+  @include fontS;
+
+  @media only screen and (max-width: $bp-medium) {
+    @include fontxS;
+  }
+}

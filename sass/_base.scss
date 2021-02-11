@@ -1,0 +1,75 @@
+/* SASSS VARIABLES */
+
+// RESPONSIVE BREAKPONTS
+
+$bp-largest: 81.25em; // 1300px/16px(font-root)
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 43.75em; // 700px
+$bp-smallest: 31.25em; // 500px
+
+/* BASIC RESET */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px/16px(root size)= 62.5%
+
+  /* 1300px */
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 1rem = 8px/16px(root size)= 50%
+  }
+}
+
+.container {
+  @include fontL;
+
+  font-family: var(--font-primary);
+  font-weight: 500;
+  color: var(--dark-grey-1);
+  background-color: var(--light-grey-1);
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 7rem 20rem 3rem 20rem;
+
+  /* 1100px */
+  @media only screen and (max-width: $bp-large) {
+    padding: 3.5rem 10rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 3rem 5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 1.5rem 2rem;
+  }
+}
+
+/* MAIN */
+
+.main {
+  display: grid;
+  grid-template-columns: [side-start] 1fr [side-end cont-start] 1.5fr [cont-end];
+  grid-template-rows: repeat(3, min-content);
+  gap: 4.2rem 3.5rem;
+
+  @media only screen and (max-width: $bp-large) {
+    gap: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    gap: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns: [side-start cont-start] minmax(0, 1fr) [side-end cont-end];
+  }
+}

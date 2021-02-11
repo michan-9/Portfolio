@@ -1,0 +1,87 @@
+/* COLORS */
+
+/* MORE INFO AT @VARIABLES */
+
+.lgrey-1 {
+  color: var(--light-grey-1);
+}
+
+.lgrey-2 {
+  color: var(--light-grey-2);
+}
+.lgrey-3 {
+  color: var(--light-grey-3);
+}
+
+.dgrey-1 {
+  color: var(--dark-grey-1);
+}
+.dgrey-2 {
+  color: var(--dark-grey-2);
+}
+.dgrey-3 {
+  color: var(--dark-grey-3);
+}
+
+/* GENERAL */
+
+/* FONT SIZE */
+
+.fontL {
+  font-size: var(--fl);
+  line-height: var(--ll);
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: var(--fm);
+    line-height: var(--lm);
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: var(--fs);
+    line-height: var(--ls);
+  }
+}
+
+/* ALIGN CENTER A ITEM WITH FLEXBOX */
+
+.center {
+  align-self: center;
+}
+
+/* ALIGN TEXT WITHOUT FLEXBOX */
+
+@media only screen and (max-width: $bp-small) {
+  .textcenter {
+    text-align: center;
+  }
+}
+
+.capit {
+  text-transform: capitalize;
+}
+
+/* MARGINS */
+
+.mtopmedium {
+  margin-top: 3.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 2rem;
+  }
+}
+
+.mbotsmall {
+  margin-bottom: 1rem;
+}
+
+.mbotmedium {
+  margin-bottom: 1.5rem;
+}
+
+/* FILLING A BUTTON FOR LAYOUT, NOTHING MORE. */
+
+.filled {
+  border: 1px solid transparent;
+  background-color: var(--color-green);
+  color: var(--color-white);
+}

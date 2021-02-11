@@ -1,0 +1,95 @@
+.header {
+  grid-column: side-start / cont-end;
+  display: flex;
+  @include basicLayout;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 12px;
+
+    @media only screen and (max-width: $bp-small) {
+      align-self: center;
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+
+  /* BOX WRAPPING ALL ITEMS OF HEADER BUT NOT IMG */
+
+  &__wrapper {
+    margin-left: 3.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* BOX WRAPPING NAME, JOB, EMAIL AND SOCIAL MEDIA */
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+      margin: 1rem 0;
+
+      & > * {
+        margin: 1px;
+      }
+    }
+  }
+
+  /* BOX WRAPPING NAME AND JOB IN ONE SIDE, MEDIA AND EMAIL IN THE OTHER HAND */
+
+  &__contact,
+  &__user {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: $bp-small) {
+      align-items: center;
+    }
+
+    & > *:first-child {
+      margin-bottom: 6px;
+
+      @media only screen and (max-width: $bp-small) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.8rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 5px;
+    }
+
+    &--red {
+      fill: var(--color-red);
+    }
+
+    &--blue {
+      fill: var(--color-sky);
+    }
+  }
+}

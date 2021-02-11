@@ -1,0 +1,17 @@
+.hobbie {
+  grid-column: side-start / side-end;
+  grid-row: 2 / span 2;
+  @include basicLayout;
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-row: 3 / 4;
+  }
+
+  &__img {
+    margin: 2.5rem 0;
+    height: 13rem;
+    object-fit: cover;
+    object-position: center;
+    @include widthBorder;
+  }
+}

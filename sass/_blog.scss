@@ -1,0 +1,29 @@
+.blog {
+  @include basicLayout;
+  grid-column: cont-start / cont-end;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $bp-medium) {
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-row: 2 / 3;
+  }
+
+  &__img {
+    margin: 2rem 0;
+    @include widthBorder;
+  }
+
+  &__link:link,
+  &__link:visited {
+    margin-top: 2rem;
+    text-decoration: none;
+    align-self: flex-end;
+    color: var(--color-green);
+    @include fontM;
+  }
+}
